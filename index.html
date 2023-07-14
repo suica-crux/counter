@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        .content {
+            text-align: center;
+        }
+        
+        button {
+            border: none;
+            border-radius: 5px;
+            width: 50%;
+            height: 50px;
+        }
+
+        #count {
+            border: none;
+            border-radius: 5px;
+            background-color: #aaa;
+            width: 50%;
+            height: 50px;
+            margin-left: 25%;
+            margin-bottom: 20px;
+        }
+
+        #countUp {
+            background-color: gray;
+            color: black;
+        }
+
+        #reset {
+            background-color: purple;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+        <div class="content">
+        <div id="count"></div>
+        <button id="countUp">カウント</button>
+        <hr>
+        <button id="reset">リセット</button>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            reset();
+
+            document.getElementById('countUp').addEventListener('click', function() {
+                countUp();
+            });
+
+            document.getElementById('reset').addEventListener('click', function() {
+                reset();
+            });
+        });
+
+        let count = 0;
+
+        function reset() {
+            count = 0;
+            document.getElementById('count').textContent = count;
+        }
+
+        function countUp() {
+            count = count + 1;
+            document.getElementById('count').textContent = count;
+        }
+    </script>
+</body>
+
+</html>
