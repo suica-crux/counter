@@ -1,80 +1,13 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        .content {
-            text-align: center;
-            margin: 20px;
-        }
-
-        button {
-            border: none;
-            border-radius: 5px;
-            width: 100%;
-            max-width: 300px;
-            height: 50px;
-            margin-bottom: 20px;
-        }
-
-        #count {
-            display: flex;
-            justify-content: center;
-            border: none;
-            border-radius: 5px;
-            background-color: #aaa;
-            width: 75%;
-            height: 50px;
-            margin-bottom: 20px;
-            margin-left: 12.5%;
-        }
-
-        #countUp {
-            background-color: gray;
-            color: black;
-        }
-
-        #reset {
-            background-color: purple;
-            color: white;
-        }
-    </style>
-</head>
-
-<body>
-    <div class="content">
-        <div id="count"></div>
-        <button id="countUp">カウント</button>
-        <hr>
-        <button id="reset">リセット</button>
-    </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            reset();
-
-            document.getElementById('countUp').addEventListener('click', function() {
-                countUp();
-            });
-
-            document.getElementById('reset').addEventListener('click', function() {
-                reset();
-            });
-        });
-
-        let count = 0;
-
-        function reset() {
-            count = 0;
-            document.getElementById('count').textContent = count;
-        }
-
-        function countUp() {
-            count = count + 1;
-            document.getElementById('count').textContent = count;
-        }
-    </script>
-</body>
-
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
