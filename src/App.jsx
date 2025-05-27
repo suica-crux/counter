@@ -17,10 +17,8 @@ function App() {
     setTimeout(() => setAnimate(false), 300);
   };
 
-  const bgColor = count % 2 === 0 ? '#f0f8ff' : '#ffe4e1';
-
   return (
-    <div className="content" style={{ backgroundColor: bgColor }}>
+    <div className="content">
       <div id="count" className={animate ? 'count animate' : 'count'}>
         {count}
       </div>
